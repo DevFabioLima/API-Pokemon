@@ -19,6 +19,8 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
 
 3-) A porta padrão é 3033.
 
+4-) Aplicação front-end: https://github.com/LucasMartins99/Pokemon
+
 ## Funcionalidade
 
 - Recebe um nome de uma cidade e busca na API [OpenWeatherMap](https://openweathermap.org/) o clima atual da mesma.
