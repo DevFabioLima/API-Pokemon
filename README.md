@@ -39,7 +39,7 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
 
 ### Pré-requisitos
 
-Para rodar está API basta dar um git clone neste repositório, ter o [NodeJS]('https://nodejs.org/en/') instalado em sua máquina e o YARN ou NPM.
+Para rodar está API basta dar um git clone neste repositório, ter o [NodeJS](https://nodejs.org/en/) instalado em sua máquina e o YARN ou NPM.
 
 ### Instalando
 
@@ -117,6 +117,7 @@ Após estes comandos a API irá rodar em sua máquina.
 - [Express](https://expressjs.com/pt-br/) - Gerenciador de requisições e rotas.
 - [Jest](https://jestjs.io) - Utilizado para testes na API.
 - [Nodemon](https://nodemon.io) - Roda o comando node automático para desenvolvedor.
+- [NodeJS](https://nodejs.org/en/) - Ambiente de execução.
 - [Sucrase](https://sucrase.io) - Transpilador de código JS.
 
 ## Contribuição
