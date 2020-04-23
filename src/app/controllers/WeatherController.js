@@ -1,17 +1,26 @@
-import axios from 'axios';
+import PokemonUseCase from '../services/PokemonUseCase';
+import WeatherUseCase from '../services/WeatherUseCase';
 
 class WeatherController {
-  async getCity(req, res) {
-    try {
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${req.params.city}&appid=APPID`
-      );
-    } catch (err) {
-      console.log(err);
+  async getPokemon(req, res) {
+    const temp = await WeatherUseCase.getTemp(req.params.city);
+    if (temp === 'Error') {
+      return res.status(400).json({ messagem: 'City not found' });
     }
+    const pokemonType = await PokemonUseCase.getPokemons(temp.typePokemon);
+    if (pokemonType === 'Error') {
+      return res.status(400).json({ messagem: 'Pokémon not found' });
+    }
+    const pokemon = {
+      raining: temp.raining,
+      temp: temp.temp,
+      name: pokemonType.name,
+      url: pokemonType.url,
+      type: temp.typePokemon,
+      city: req.params.city,
+    };
+
+    return res.json(pokemon);
   }
-  // Pegar a cidade do parms
-  // Buscar na API
-  // Regra de negocio
 }
 export default new WeatherController();
