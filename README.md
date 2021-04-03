@@ -3,7 +3,7 @@
 
 ## Sobre a API
 
-A ideia principal dessa api é:
+A ideia principal dessa api é :
 
 _"Encontrar pokemons baseado no clima de uma cidade"_.
 
